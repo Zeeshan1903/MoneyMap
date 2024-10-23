@@ -3,7 +3,11 @@
 #include <string>
 #include <cmath>
 #include <vector>
+#include <cstdlib>
+#include <cstdio>
+
 using namespace std;
+
 
 int totalDebitedAmnt = 0;
 int totalCreditedAmnt = 0;
@@ -125,10 +129,8 @@ int main(){
 
     string_int(amnt);
     for(int i =0; i<date.size(); i++){
-        amnt[i] = trim(amnt[i]);
-        date[i] = trim(date[i]);
-        type[i] = trim(type[i]);
-        cout << date[i] << "\t" << type[i] <<"\t" << amnt[i] << "\t"<<amntInt[i]<<endl;
+
+        cout << date[i] << "\t" << type[i] <<"\t" << amnt[i]<<endl;
     }
     credit(amntInt);
     debit(amntInt);
